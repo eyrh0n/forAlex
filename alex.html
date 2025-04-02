@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Alex</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+            position: relative; /* Added to position the signature */
+            padding-bottom: 40px; /* Reduced bottom padding */
+        }
+        h1 {
+            color: #d63384;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            min-height: 150px;
+        }
+        button {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b52a6a;
+        }
+        .signature {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 16px;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>For Alex 🤍</h1>
+        <p id="poem">-solely from the heart-</p>
+        <button onclick="generatePoem()">Click me!</button>
+        <p class="signature">- shane</p>
+    </div>
+
+    <script>
+        const messages = [
+            "You are worth it.",
+            "Every moment with you feels like a beautifully written poem.",
+            "Loving you is like breathing—effortless and necessary.",
+            "If my heart could write, every page would be about you.",
+            "If only you could see you through these eyes of mine, \nI swear to God you'd know you're divine.",
+            "Knowing you more leads to loving you more.",
+            "All The Ridleys' songs are about you, you own them.",
+            "You are strong, do not forget that.",
+            "You are the reason even my worst days have a silver lining.",
+            "You have me always, in all ways.",
+            "I will always be your number one fan!",
+            "Other people don't matter, only u.",
+            "You deserve every good thing this world has to offer.",
+            "You are not a burden, nor a problem. You are a blessing.",
+            "Loving and understanding you will never be hard.",
+            "You won me, my heart, and my soul for eternity.",
+            "Just the thought of you makes my heart race in the best way possible."
+        ];
+
+        function generatePoem() {
+            const allTexts = [
+                "Your laughter is a song I never knew I needed,\nA melody that lingers, never defeated.",
+                "I trace the sky just to find your hue,\nIn every shade, I see a part of you.",
+                "They said the stars are stories untold,\nYet in your eyes, I see galaxies unfold.",
+                "If love had a language, it'd sound like your name,\nA rhythm, a whisper, a beautiful flame.",
+                "You are the sunrise I never expected,\nYet here you are, my soul connected.",
+                "Every glance from you rewrites my fate,\nLike constellations shifting, a love innate.",
+                "You walk like poetry, speak in prose,\nEvery word you say, a verse that flows.",
+                "Even the moon envies the glow in your eyes,\nA light that shames the midnight skies.",
+                "I’ve written countless lines, yet none compare,\nTo the beauty you hold, the love you bare.",
+                "If my heart were a compass, it’d point to you,\nA north star steady, a love so true."
+            ].concat(messages);
+
+            const randomIndex = Math.floor(Math.random() * allTexts.length);
+            document.getElementById("poem").textContent = allTexts[randomIndex];
+        }
+    </script>
+</body>
+</html>
